@@ -1,0 +1,962 @@
+/*
+Theme Name: Hefesto Intelligence
+Theme URI: 
+Description: Custom Wordpress template
+Version: 1.0
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #FFF;
+    color: #6d6d6d;
+    font-size: 12pt;
+    line-height: 1.4;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.strong{
+    font-weight: 900;
+}
+
+a {
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+html.home, .home body, html.page-id-11, .page-id-11 body{
+    height: 100%;
+}
+img{
+    max-width: 100%;
+}
+
+.clear, .clearThree, .clearTwo {
+    clear: both;
+}
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+.group:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+
+.column {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    width: 33.3333%;
+}
+.comunBlock{
+    float: left;
+    width: 100%;
+}
+
+.marginRight {
+    margin-right: 2%;
+}
+
+.containerAbsolute{
+    position: absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: 0;
+    text-align: center;
+}
+.partLeft{
+    float: left;
+    width: 50%;
+}
+.partRight{
+    float: right;
+    width: 50%;
+}
+.generalLink{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;  
+    z-index: 111; 
+}
+.shadow{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    background-color: black;
+}
+.menuFixed{
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    display: none;
+    top:0;
+    margin-top: 0px !important;
+}
+.spaceBlock{
+    height: 46px;
+    display: none;
+}
+.buttonSubmit input, .button1, .button2 {
+    font-weight: 600;
+    margin-top: 10px;
+    background-color: #ff6600;
+    border: 2px solid #ff6600;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    transition: all 0.5s ease 0s;
+}
+.buttonSubmit input:hover, .button1:hover{
+    background-color: transparent;
+    color: #282828;
+}
+.button2 {
+    background-color: #fff;
+    border: 2px solid red;
+    color: red;
+}
+.button2:hover{
+    background-color: red;
+    color: #fff;
+}
+.backgroundImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.slick-next {
+
+    right: 20px !important;
+    z-index: 999 !important;
+
+}
+.slick-prev {
+
+    left: 20px !important;
+    z-index: 999 !important;
+
+}
+.slick-prev::before, .slick-next::before {
+
+
+    font-size: 25pt !important;
+    color: #000 !important;
+
+}
+
+/************************************************************* START - HEADER */
+
+header {
+    background-color: grey;
+}
+.sub-menu {
+    display: none;
+}
+
+
+.main-menu{
+    background-color: #01243B;
+    height: 46px;
+
+}
+.main-menu ul {
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+
+.main-menu li {
+    display: inline-block;
+    float: left;
+}
+
+
+.main-menu li a {
+    color: white;
+    float: left;
+    font-weight: 600;
+    padding: 11px 21px;
+    text-transform: uppercase;
+    transition: all 0.5s ease 0s;
+}
+.main-menu li a:hover, .main-menu .current_page_item a{
+    background-color: white;
+    color: #282828;
+
+}
+.headerDefault {
+    background-color: red;
+    height: 300px;
+}
+
+#top {
+    background-color: #002056;
+    color: #fff;
+    padding: 3px 0;
+    text-align: center;
+    font-size: 10pt;
+}
+#top a {
+    color: #fff;
+    text-decoration: underline;
+}
+#top .partLeft a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+
+/************************************************************* END - HEADER */
+
+
+/************************************************************* START - HOME */
+
+
+.generalContent {
+    padding: 50px 0;
+}
+
+#page_content {
+    color: #282828;
+    text-align: center;
+}
+
+.loginBlock {
+    text-align: center;
+    width: 500px;
+    display: inline-block;
+    padding: 50px 20px;
+    border: solid 10px #002056;
+}
+.loginBlock a.linkLogin {
+    color: grey;
+    margin: 20px 0 0;
+    text-align: left;
+    width: 100%;
+    display: block;
+    font-size: 10pt;
+}
+
+.loginBlock p.strong{
+    font-size: 15pt;
+}
+.loginBlock p{
+    margin: 0 0 20px;
+}
+.hiddenMessage {
+
+    display: none;
+    padding: 10px 10px;
+
+}
+.hiddenMessage.correct {
+    color: green;
+    margin: 10px 0 30px;
+    display: block;
+    border: solid 2px green;
+}
+.hiddenMessage.incorrect {
+    color: red;
+    margin: 10px 0 30px;
+    display: block;
+    border: solid 2px red;
+}
+.searchBlock{
+    margin: 50px 0;
+}
+
+
+.searchBlock h3 {
+    text-align: left;
+    margin: 0 0 20px;
+}
+
+.resultsBlock input{
+    width: 100%;
+}
+.resultItem {
+    background-color: #efefef;
+    padding: 20px;
+    margin: 0 0 20px;
+}
+.resultItem h3 {
+    margin: 0 0 20px;
+    text-decoration: underline;
+    display: inline-block;
+}
+.resultItem h4 {
+    width: 33.333%;
+    float: left;
+    margin: 0 0 20px;
+    font-size: 11pt;
+    font-weight: 300;
+}
+
+/************************************************************* END - HOME */
+/************************************************************* START - MENU PANEL */
+.hiddenTag{display: none;}
+
+.menuPanelBlock.group {
+    width: 50%;
+    display: inline-block;
+}
+
+.menuPanelBlock .itemBlock {
+    float: left;
+    width: 25%;
+    background-color: #ff6600;
+    height: 49px;
+    text-align: center;
+    border-left: 1px solid #fff;
+    color: #fff;
+    font-size: 11pt;
+    font-weight: 600;
+    padding: 15px 5px 0;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+}
+.menuPanelBlock.adminPanel .itemBlock {
+
+    width: 20%;
+
+}
+.menuPanelBlock.participanteMenuBlock .itemBlock {
+
+    width: 25%;
+
+}
+.menuPanelBlock .itemBlock i{
+    font-size: 16pt;
+    margin: 0 0 10px;
+}
+.menuPanelBlock .itemBlock a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+
+}
+.menuPanelBlock .itemBlock:hover{
+    background-color: #A899D8;
+    color: #282828;
+}
+.page-id-11 .page11, .page-id-13 .page13, .page-id-15 .page15, .page-id-21 .page21,
+.page-id-34 .page21, .page-id-36 .page21,
+.page-id-24 .page24, .page-id-26 .page24, .page-id-28 .page24, .page-id-32 .page32{
+    background-color: #A899D8 !important;
+    color: #282828 !important;    
+} 
+/************************************************************* END - MENU PANEL */
+/************************************************************* START - DEFAULT PAGE */
+.page-template-default #page_content h2{
+    margin: 15px 0 30px;
+}
+.page-template-default #page_content ul{
+    padding-left: 20px;
+    display: block;
+}
+.page-template-default #page_content ul li{
+    margin: 0 0 10px;
+    display: block;
+}
+/************************************************************* END - DEFAULT PAGE */
+
+/************************************************************* START - AG GRUPO PAGE */
+td.red {
+    color: red;
+    text-align: center;
+    font-size: 20pt;
+}
+td.green{
+    color: green;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.generalTable {
+    margin: 30px 0;
+}
+.usuarioLine span, .usuarioLine .red i{
+    cursor: pointer;
+}
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+table thead td {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color: #282828;
+    font-size: 11pt;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+table thead.expertoBlock td{
+    background-image: none;
+    color: #000;
+}
+table td {
+    padding: 3px 10px;
+    border: solid 1px #282828;
+}
+table td .button1 {
+
+    margin: 0;
+    box-shadow: none;
+    padding: 3px 20px;
+    font-size: 12pt;
+
+}
+table td a {
+    color: #282828;
+}
+.sendedText{
+    font-weight: 600;
+}
+.hiddenMessage{
+    display: none;
+}
+.hiddenMessage {
+
+    display: none;
+    padding: 10px 10px;
+
+}
+.hiddenMessage.correct {
+    color: green;
+    margin: 10px 0 30px;
+    display: block;
+    border: solid 2px green;
+}
+.hiddenMessage.incorrect {
+    color: red;
+    margin: 10px 0 30px;
+    display: block;
+    border: solid 2px red;
+}
+.message {
+    margin: 10px 0;
+    border: solid 2px white;
+    padding: 10px;
+}
+.message.error {
+    color: red;
+    border: solid 2px red;
+    padding: 10px;
+    margin: 0 0 20px;
+}
+.message.success{
+    color: green;
+    border: solid 2px green;
+    margin: 0 0 20px;
+}
+/************************************************************* END - AG GRUPO PAGE */
+
+/************************************************************* START - AG REGISTRO PAGE */
+.form-input {
+    border: 1px solid #ccc;
+    height: 40px;
+    padding: 4px 10px 0;
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+.form-input:hover, .form-input:focus{
+    border: 1px solid #ccc !important;
+    border-radius: 0 !important;
+    outline: none;
+}
+
+#formRegistro{
+    text-align: left;
+}
+.titleForm {
+
+    background-color: #002056;
+    color: #fff;
+    padding: 10px 5px;
+    font-size: 11pt;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+.titleForm h2 {
+    text-transform: uppercase;
+    font-size: 10pt;
+    color: #fff;
+    margin: 3px 0px 5px 8px;
+}
+.form-item {
+    margin: 0 0 10px;
+    float: left;
+    width: 100%;
+}
+.listInsertBlock.resultItem.group {
+    text-align: center;
+}
+.generalFormBlock{
+    border:solid 1px #002056;
+    border-top: none;
+    margin: 0 0 20px;
+    padding: 20px 10px;
+}
+.form-item label {
+    width: 30%;
+    float: left;
+    margin: 10px 0 0;
+    text-align: left;
+}
+.form-item .form-input{
+    width: 70%;
+}
+.generalFormBlock .partRight p.descripcionServicio {
+    margin:0;
+
+}
+.generalFormBlock .partRight input{
+    float: left;
+    margin: 5px 10px 0 0;
+}
+.generalFormBlock .partRight p span {
+
+    font-weight: 400;
+    display: block;
+
+}.generalFormBlock .partRight span.costeServicio {
+    font-weight: 400;
+    display: block;
+    float: left;
+    margin: 0 0 11px 24px;
+}
+.tipoInscripcionBlock {
+
+    margin: 20px 0 0;
+    padding: 20px 0 0;
+    display: none;
+
+}
+.form-item input[type="radio"] {
+    margin: 14px 0 0;
+}
+.inscriptionBlock .form-item input[type="radio"] {
+    margin: 11px 7px 0 28px;
+}
+.form-item.firstBlock {
+
+    border-bottom: solid 1px #002056;
+    padding: 0 0 10px;
+
+}
+.textBlock .title{
+    font-weight: 600;
+    margin: 30px 0 30px;
+    font-size: 12pt;
+}
+
+/************************************************************* END - AG REGISTRO PAGE */
+
+/************************************************************* START - G IOC PAGE */
+.generalSelect {
+    width: 100%;
+    padding: 6px 0;
+    margin: 5px 0;
+}
+#insertIOCBlock {
+    margin: 30px 0;
+}
+.generalInput {
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+#formInsert textarea{
+    min-height: 145px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+#formInsert .editBlock textarea {
+    min-height: 186px;
+}
+#formInsert .partLeft, #formInsert .partRight{
+    padding: 0 1%;
+}
+/************************************************************* END - G IOC PAGE */
+
+/************************************************************* START - G OPERATION PAGE */
+td.changeOpeButton {
+    cursor: pointer;
+}
+.iocPanel.buttonBlock {
+    margin: 0 0 30px;
+    width: 300px;
+    display: inline-block;
+}
+
+
+/************************************************************* END - G OPERATION PAGE */
+
+
+
+
+
+/********************************************************START - CONTACTO */
+
+.generalContent.contactPage .partLeft{
+    width: 65%;
+}
+
+
+.generalContent.contactPage .partRight {
+    padding: 55px 0px 55px 75px;
+    width: 35%;
+}
+.firstLine{
+    float: left;
+    width: 49%;
+}
+.firstLine2{
+    float: right;
+    width: 49%;
+}
+.secondLine{
+    float: left;
+    width: 100%;
+} 
+
+.firstLine, .firstLine2, .secondLine{
+    margin-bottom: 20px;
+}
+.wpcf7-form span, .wpcf7-form span input, .wpcf7-form span textarea{
+    width: 100%;
+}
+
+
+.wpcf7-form span input, .wpcf7-form span textarea {
+    border: 3px solid #01243B;
+    color: white;
+    font-size: 12pt;
+    padding: 10px 15px;
+    background-color: #01243B;
+}
+
+
+
+.wpcf7-form input::-webkit-input-placeholder, .wpcf7-form textarea::-webkit-input-placeholder{
+    color: white;
+    opacity: 1; 
+    font-size:12pt;
+}
+
+.wpcf7-form input:-moz-placeholder, .wpcf7-form textarea:-moz-placeholder{ /* Firefox 18- */
+    color: white;
+    opacity: 1; 
+    font-size:12pt;
+}
+
+.wpcf7-form input::-moz-placeholder, .wpcf7-form textarea::-moz-placeholder {  /* Firefox 19+ */
+    color: white;
+    opacity: 1; 
+    font-size:12pt;
+}
+
+.wpcf7-form input:-ms-input-placeholder, .wpcf7-form textarea:-ms-input-placeholder {  
+    color: white;
+    opacity: 1; 
+    font-size:12pt;
+}
+
+.buttonSubmit {
+    float: left;
+    clear: left;
+}
+
+.thirdLine {
+    float: left;
+    width: 100%;
+}
+.wpcf7-form-control-wrap {
+    float: left;
+    clear: left;
+}
+div.wpcf7-response-output {
+    margin: 0 !important;
+    padding: 0 !important;
+    float: left;
+    width: 100%;
+}
+div.wpcf7-mail-sent-ok {
+    color: green !important;
+    border:none !important;
+}
+
+div.wpcf7-mail-sent-ng {
+    border:none !important;
+}
+
+div.wpcf7-spam-blocked {
+    border:none !important;
+}
+
+div.wpcf7-validation-errors {
+    color: red !important;
+    border:none !important;
+}
+
+.wpcf7 {
+    margin: 100px 0 0;
+    text-align: left;
+}
+.cf7sr-g-recaptcha {
+    float: left;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+/********************************************************END - CONTACTO */
+
+/************************************************************* START - FOOTER */
+footer{
+    width: 100%;
+    background-color: #002056;
+    color: #fff;
+    padding: 3px 0 4px;
+    text-align: center;
+    font-size: 10pt;
+}
+footer a{
+    color: #fff;
+    text-decoration: underline;
+}
+/************************************************************* END - FOOTER */
+
+
+.menuResponsive, .clearResponsive, .clearTwo, .hiddenUrl{
+    display: none;
+}
+
+@media (max-width: 1120px) {
+
+    .container {
+        padding: 0 20px;
+        width: 100%;
+    }
+
+    /*************************************************** START - HEADER */
+    
+    .main-menu.group .container{
+        padding: 0;
+    }
+    .menu-main-menu-container {
+        background-color: #01243B;
+        display: none;
+        left: 0;
+        position: absolute;
+        top: 45px;
+        width: 100%;
+        text-align: left;
+        z-index: 99999;
+    }
+
+    #menu-main-menu li {
+        float: left;
+        width: 100%;
+    }
+     #menu-main-menu li a{
+        width: 100%;
+     }
+
+
+    .menuResponsive {
+        color: white;
+        display: block;
+        padding: 8px 0 0 20px;
+    }
+    .menuResponsive i {
+        cursor: pointer;
+        float: left;
+        font-size: 20pt;
+        margin: 1px 10px 0 0;
+    }
+
+    .menuResponsive > p {
+        float: left;
+        font-size: 17pt;
+        margin: 0;
+    }
+
+    /*************************************************** END - HEADER */
+
+}
+
+@media (max-width: 1000px) {
+
+    /*************************************************** START - BLOG */
+
+    .grid2Block {
+        padding-right: 0;
+        width: 100%;
+    }
+    aside{
+        width: 100%;
+    }
+    #categories-2 ul{
+        display: none;
+    }
+
+    #categories-2 {
+        border: 1px solid #ddd;
+        color: #282828;
+        cursor: pointer;
+        margin: 20px 0;
+        padding: 5px;
+    }
+    /*************************************************** END - BLOG */
+
+    /*************************************************** START - FOOTER */
+    footer .column {
+        width: 100%;
+        text-align: center;
+        margin: 0 0 30px;
+        border: none;
+    }
+    footer .logo{
+        float: none;
+    }
+    .lastBlock .partLeft, .lastBlock .partRight{
+        width: 100%;
+        text-align: center;
+    }
+    .partRight p.lastLine {
+        margin: 0 0 46px;
+    }
+    .lastBlock a {
+        color: #282828;
+        position: absolute;
+        bottom: -41px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+    .lastBlock img {
+        float: none;
+        margin: 0;
+    }
+    /*************************************************** END - FOOTER */
+
+
+}
+
+@media (max-width: 800px) {
+
+    /*************************************************** START - CONTACT */
+    .firstLine.marginRight {
+        margin-right: 0;
+    }
+    .firstLine {
+        width: 100%;
+    } 
+    .generalContent.contactPage .partLeft, .generalContent.contactPage .partRight {
+        width: 100%;
+    }   
+    .generalContent.contactPage .partRight{
+        margin-bottom: 30px;
+    }
+    /*************************************************** END - CONTACT */
+
+
+}
+
+
+@media (max-width: 750px) {
+
+    /*************************************************** START - BLOG */
+
+    .blogPage article { 
+        width: 48%;
+    }
+    .clearTwo{
+        display: block;
+    }
+    .clearThree{
+        display: none;
+    }
+
+    /*************************************************** END - BLOG */
+
+
+}
+
+@media (max-width: 550px) {
+
+    /*************************************************** START - BLOG */
+
+
+    .clearTwo{
+        display: none;
+    }
+
+    .grid2Block {
+        text-align: center;
+    }
+
+    .blogPage article {
+        display: inline-block;
+        float: none;
+        width: 300px;
+        margin: 0 0 20px;
+    }
+    /*************************************************** END - BLOG */
+
+
+}
+@media (max-width: 350px) {
+
+    /*************************************************** START - BLOG */
+
+    article .image {
+        height: 160px;
+    }
+    .blogPage article {
+        width: 100%;
+    }
+    /*************************************************** END - BLOG */
+
+
+}
